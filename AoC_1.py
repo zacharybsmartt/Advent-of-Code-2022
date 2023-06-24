@@ -1,6 +1,8 @@
 
 with open("AoC_1.txt", "r") as f:
-    fulltext = f.splitlines()
+    fulltext = f.readlines()
+    for nums in fulltext:
+        nums = nums
     print(fulltext)
-#struggling somehow, do this at home
+# testing git on new comp
 
