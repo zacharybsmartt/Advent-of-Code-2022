@@ -22,9 +22,12 @@ Approach Strategy:
 
     3: Sum up total points
 """
-x_points = 
-y_points = 
-z_points = 
+win_points = 6
+draw_points = 3
+loss_points = 0
+x_points = 1 # rock, A
+y_points = 2 # paper, B
+z_points = 3 # scissors, C
 
 
 with open('AoC_2.txt', 'r') as f:
@@ -35,3 +38,42 @@ with open('AoC_2.txt', 'r') as f:
         opponent_plays.append(pair.split(' ')[0])
         self_plays.append(pair.split(' ')[-1])
 
+score = 0
+i = 0
+print(opponent_plays)
+print(self_plays)
+
+for matches in range(len(opponent_plays)):
+    if opponent_plays[i] == self_plays[i]:
+        score += draw_points
+        i += 1
+
+    elif opponent_plays[i] == 'A' and self_plays[i] == 'Y':
+        score += win_points + y_points
+        i += 1
+    
+    elif opponent_plays[i] == 'A' and self_plays[i] == 'Z':
+        score += loss_points + z_points
+        i += 1
+    
+    elif opponent_plays[i] == 'B' and self_plays[i] == 'X':
+        score += loss_points + x_points
+        i += 1
+    
+    elif opponent_plays[i] == 'B' and self_plays[i] == 'Z':
+        score += win_points + z_points
+        i += 1
+    
+    elif opponent_plays[i] == 'C' and self_plays[i] == 'X':
+        score += win_points + x_points
+        i +=1
+    
+    elif opponent_plays[i] == 'C' and self_plays[i] == 'Z':
+        score += loss_points + z_points
+        i += 1
+    
+    else:
+        print("not a valid combination")
+
+
+print(score)
