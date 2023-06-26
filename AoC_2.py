@@ -32,6 +32,8 @@ Yeah underactuated is sick, Russ' lectures are also really good and on YouTube, 
 
  like 1
 
+https://www.appliedintuition.com/
+
 Robotic Manipulation
 """
 win_points = 6
