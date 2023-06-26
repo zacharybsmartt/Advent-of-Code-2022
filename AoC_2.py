@@ -21,6 +21,18 @@ Approach Strategy:
     2: Compare the values of the left and right through a loop in order to calculate total points
 
     3: Sum up total points
+
+    [12:04 PM] Jose Martinez De Leon
+
+Hey! Yeah I took 6.0001, 6.009, 6.006, and 6.832 (Underactuated). I didn't have the chance to take any others, but I have a friend who's finishing up her masters in CS focusing on robotics, I can ask her what classes she would recommend if you'd like. 
+
+[12:05 PM] Jose Martinez De Leon
+
+Yeah underactuated is sick, Russ' lectures are also really good and on YouTube, there's another one of his classes that I think is really good too https://manipulation.csail.mit.edu/
+
+ like 1
+
+Robotic Manipulation
 """
 win_points = 6
 draw_points = 3
