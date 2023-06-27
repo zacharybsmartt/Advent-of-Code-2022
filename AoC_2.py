@@ -33,9 +33,10 @@ Yeah underactuated is sick, Russ' lectures are also really good and on YouTube, 
  like 1
 
 https://www.appliedintuition.com/
-
+https://www.figure.ai/  humanoid robotics
 Robotic Manipulation
 """
+
 win_points = 6
 draw_points = 3
 loss_points = 0
@@ -58,34 +59,42 @@ print(opponent_plays)
 print(self_plays)
 
 for matches in range(len(opponent_plays)):
-    if opponent_plays[i] == self_plays[i]:
-        score += draw_points
+    if (opponent_plays[i] == 'A') == (self_plays[i] == 'X'):
+        score += draw_points + x_points
         i += 1
-
+        
+    elif (opponent_plays[i] == 'B') == (self_plays[i] == 'Y'):
+        score += draw_points + y_points
+        i += 1    
+        
+    elif (opponent_plays[i] == 'C') == (self_plays[i] == 'Z'):
+        score += draw_points + z_points
+        i += 1 
+        
     elif opponent_plays[i] == 'A' and self_plays[i] == 'Y':
         score += win_points + y_points
         i += 1
-    
+       
     elif opponent_plays[i] == 'A' and self_plays[i] == 'Z':
         score += loss_points + z_points
         i += 1
-    
+        
     elif opponent_plays[i] == 'B' and self_plays[i] == 'X':
         score += loss_points + x_points
         i += 1
-    
+        
     elif opponent_plays[i] == 'B' and self_plays[i] == 'Z':
         score += win_points + z_points
         i += 1
-    
+        
     elif opponent_plays[i] == 'C' and self_plays[i] == 'X':
         score += win_points + x_points
         i +=1
-    
-    elif opponent_plays[i] == 'C' and self_plays[i] == 'Z':
-        score += loss_points + z_points
+       
+    elif opponent_plays[i] == 'C' and self_plays[i] == 'Y':
+        score += loss_points + y_points
         i += 1
-    
+        
     else:
         print("not a valid combination")
 
