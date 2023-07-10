@@ -46,57 +46,64 @@ z_points = 3 # scissors, C
 
 
 with open('AoC_2.txt', 'r') as f:
+    print(f.read())
     pair_list = f.read().split('\n')
-    opponent_plays = []
-    self_plays = []
-    for pair in pair_list:
-        opponent_plays.append(pair.split(' ')[0])
-        self_plays.append(pair.split(' ')[-1])
+    print(pair_list)
+    # opponent_plays = []
+    # self_plays = []
+    # for pair in pair_list:
+    #     opponent_plays.append(pair.split(' ')[0])
+    #     self_plays.append(pair.split(' ')[-1])
+    # plays = list(zip(opponent_plays, self_plays))
 
-score = 0
-i = 0
-print(opponent_plays)
-print(self_plays)
 
-for matches in range(len(opponent_plays)):
-    if (opponent_plays[i] == 'A') == (self_plays[i] == 'X'):
-        score += draw_points + x_points
-        i += 1
+
+# read and parse all data first
+
+# score = 0
+# i = 0
+# print(plays)
+# print(plays)
+
+# for matches in range(len(plays)):
+#     if (plays[0] == 'A') == (plays[1] == 'X'):
+#         score += draw_points + x_points
+#         i += 1
         
-    elif (opponent_plays[i] == 'B') == (self_plays[i] == 'Y'):
-        score += draw_points + y_points
-        i += 1    
+#     elif (plays[0] == 'B') == (plays[1] == 'Y'):
+#         score += draw_points + y_points
+#         i += 1    
         
-    elif (opponent_plays[i] == 'C') == (self_plays[i] == 'Z'):
-        score += draw_points + z_points
-        i += 1 
+#     elif (plays[0] == 'C') == (plays[1] == 'Z'):
+#         score += draw_points + z_points
+#         i += 1 
         
-    elif opponent_plays[i] == 'A' and self_plays[i] == 'Y':
-        score += win_points + y_points
-        i += 1
+#     elif plays[0] == 'A' and plays[1] == 'Y':
+#         score += win_points + y_points
+#         i += 1
        
-    elif opponent_plays[i] == 'A' and self_plays[i] == 'Z':
-        score += loss_points + z_points
-        i += 1
+#     elif plays[0] == 'A' and plays[1] == 'Z':
+#         score += loss_points + z_points
+#         i += 1
         
-    elif opponent_plays[i] == 'B' and self_plays[i] == 'X':
-        score += loss_points + x_points
-        i += 1
+#     elif plays[0] == 'B' and plays[1] == 'X':
+#         score += loss_points + x_points
+#         i += 1
         
-    elif opponent_plays[i] == 'B' and self_plays[i] == 'Z':
-        score += win_points + z_points
-        i += 1
+#     elif plays[0] == 'B' and plays[1] == 'Z':
+#         score += win_points + z_points
+#         i += 1
         
-    elif opponent_plays[i] == 'C' and self_plays[i] == 'X':
-        score += win_points + x_points
-        i +=1
+#     elif plays[0] == 'C' and plays[1] == 'X':
+#         score += win_points + x_points
+#         i +=1
        
-    elif opponent_plays[i] == 'C' and self_plays[i] == 'Y':
-        score += loss_points + y_points
-        i += 1
+#     elif plays[0] == 'C' and plays[1] == 'Y':
+#         score += loss_points + y_points
+#         i += 1
         
-    else:
-        print("not a valid combination")
+#     else:
+#         print("not a valid combination")
 
 
-print(score)
+# print(score)
