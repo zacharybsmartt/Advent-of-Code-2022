@@ -100,3 +100,5 @@ for matches in range(len(opponent_plays)):
 
 
 print(score)
+
+# man I need to get back to this code, this is a problem for tomorrow at work
