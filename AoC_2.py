@@ -106,4 +106,4 @@ with open('AoC_2.txt', 'r') as f:
 #         print("not a valid combination")
 
 
-# print(score)
+print(score)
